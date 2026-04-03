@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    background: 0;
+}
+body{
+    overflow: hidden;
+    height:100vh;
+}
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width: 100vw;
+height: 100vh;
+object-fit: cover;
+z-index:-1;
+}
+.gameContainer{
+    position:relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+
+}
+.dino{
+    background-image: url(./dino.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    position: absolute;
+    width:105px;
+    height:115px;
+    z-index: 4;
+    left: 220px;
+    bottom: 120px;
+    transition: none;
+}
+.obstacle{position: absolute;
+bottom: 100px;
+left: 100%;
+z-index: 3;
+image-rendering: auto;
+background-color: transparent;
+}
+.gameOver {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 39px;
+  font-weight: 700;
+  z-index: 10;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+#scoreCard.new-high-score-flash {
+    animation: hsFlash 0.25s ease-in-out 6;
+    color: #ffe36e;
+    text-shadow: 0 0 10px rgba(255, 227, 110, 0.8);
+}
+
+@keyframes hsFlash {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
